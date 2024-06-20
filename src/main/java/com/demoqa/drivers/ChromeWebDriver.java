@@ -1,6 +1,7 @@
 package com.demoqa.drivers;
 
 
+import com.google.common.collect.ImmutableMap;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,9 +30,11 @@ import static com.demoqa.utils.ConfigReader.getValue;
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
+        options.setCapability("goog:chromeOptions", ImmutableMap.of("verboseLogging", true));
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--disable-extensions");
         options.addArguments("--window-size=1920,1080");
+        options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
 
         if (Boolean.parseBoolean(getValue("headless"))) {
