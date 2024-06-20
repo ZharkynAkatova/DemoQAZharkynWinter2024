@@ -30,7 +30,6 @@ import static com.demoqa.utils.ConfigReader.getValue;
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        options.setCapability("goog:chromeOptions", ImmutableMap.of("verboseLogging", true));
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--disable-extensions");
         options.addArguments("--window-size=1920,1080");
@@ -42,8 +41,9 @@ import static com.demoqa.utils.ConfigReader.getValue;
         }
 
         WebDriver driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
         return driver;
     }
 }
