@@ -5,7 +5,9 @@ import com.demoqa.utils.RandomUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
 public class BaseTest{
 
     protected WebDriver driver;

@@ -1,5 +1,6 @@
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
 public class MenuTest extends BaseTest{
 
     @Test (description = "Verify move to element methods is working")

@@ -2,7 +2,8 @@ import io.qameta.allure.Step;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-//@Listeners(com.demoqa.listener.ScreenshotListener.class)
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
+
 public class ButtonsTest extends BaseTest{
 
     @Test(groups = {"Smoke", "API", "1700"}, description = "Verify double click button is working propertly")

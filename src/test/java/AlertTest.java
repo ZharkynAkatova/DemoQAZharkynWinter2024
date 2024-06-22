@@ -1,6 +1,7 @@
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
 public class AlertTest extends BaseTest{
 
     @Test(groups = {"Smoke", "UI", "1721"}, description = "Alert test")

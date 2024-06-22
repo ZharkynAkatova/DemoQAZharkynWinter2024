@@ -1,7 +1,8 @@
 import com.demoqa.entities.Employee;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import java.util.List;
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
 
 public class WebTableTest extends BaseTest{
 

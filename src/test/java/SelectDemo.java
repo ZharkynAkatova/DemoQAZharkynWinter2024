@@ -1,8 +1,9 @@
 import com.demoqa.helper.DropDownHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
 
 public class SelectDemo extends BaseTest{
 

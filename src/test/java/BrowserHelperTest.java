@@ -1,6 +1,7 @@
 import org.openqa.selenium.By;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
+@Listeners(com.demoqa.listener.ScreenshotListener.class)
 public class BrowserHelperTest  extends  BaseTest{
 
     @Test
