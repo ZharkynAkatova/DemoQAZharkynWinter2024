@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 @Listeners(com.demoqa.listener.ScreenshotListener.class)
 public class BrowserHelperTest  extends  BaseTest{
 
-    @Test
+    @Test (groups = {"Smoke", "UI", "1724"}, description = "test123")
     void test123() throws InterruptedException {
         browserHelper.open("https://demoqa.com/browser-windows");
         driver.findElement(By.xpath("//span[text() = 'Alerts']")).click();
@@ -16,7 +16,7 @@ public class BrowserHelperTest  extends  BaseTest{
         browserHelper.refreshThePage();
     }
 
-    @Test
+    @Test (groups = {"Smoke", "UI", "1725"}, description = "test12")
     void test12() throws InterruptedException {
         browserHelper.open("https://demoqa.com/browser-windows");
         Thread.sleep(2000);

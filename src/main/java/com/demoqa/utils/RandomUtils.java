@@ -25,7 +25,7 @@ public class RandomUtils {
         practicFormEntity.setMobileNumberInput(faker.phoneNumber().subscriberNumber(10));
         practicFormEntity.setSubjectsContainerInput("Math");
         practicFormEntity.setCurrentAddressInput(faker.address().fullAddress());
-        practicFormEntity.setPicturePath ("C:\\Users\\user\\Desktop\\Кот_с_наушниками.jpg");
+        practicFormEntity.setPicturePath ("C:\\Users\\user\\IdeaProjects\\DemoQAWinter24\\src\\main\\resources\\pictures\\Кот_с_наушниками.jpg");
         return practicFormEntity;
     }
 
